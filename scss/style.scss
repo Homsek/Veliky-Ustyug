@@ -1,0 +1,95 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import "_header", "_home", "_footer";
+
+body {
+	max-width: 100vw;
+	font-family: Montserrat;
+}
+
+main {
+	background-color: #4B54A6;
+}
+
+
+section {
+	padding: 65px 15px;
+}
+
+._title {
+	// font-family: 'Times New Roman';
+	font-style: normal;
+	font-weight: 400;
+	font-size: calc(19px + 14 * (100vw / 1440));
+	line-height: 160%;
+	text-transform: uppercase;
+  	margin-bottom: 45px;
+	color: white;
+
+	@media (max-width:768px) {
+		margin-bottom: 30px;
+	}
+}
+
+._text {
+	// font-family: 'Times New Roman';
+	font-style: normal;
+	font-weight: 400;
+	font-size: calc(16.5px + 2.5 * (100vw / 1440));
+	line-height: 190%;
+	color: white;
+}
+
+._lock {
+	overflow: hidden;
+}
+
+
+.element-animation {
+	opacity: 0;
+	transform: translateX(8%);
+ }
+ .element-animation.element-show {
+	opacity: 1;
+	transition: all 1s;
+	transform: translateX(0%);
+ }
